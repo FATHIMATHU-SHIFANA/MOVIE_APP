@@ -1,10 +1,10 @@
-import React, { useContext, useState} from 'react'
+import React, { useContext} from 'react'
 import { Button, Container, Form, Nav, Navbar } from 'react-bootstrap'
 import { Link} from 'react-router-dom'
 import { BiCameraMovie } from "react-icons/bi";
 import { context } from '../App';
 const Navbars = () => {
-const {searchinp, setsearchinp,searchhide, setsearchhide} = useContext(context)
+const {searchinp, setsearchinp,searchhide} = useContext(context)
 
   const getInput=(e)=>{
    setsearchinp(e.target.value)
@@ -15,9 +15,6 @@ const {searchinp, setsearchinp,searchhide, setsearchhide} = useContext(context)
     e.preventDefault();
   }
 
-  // setsearchhide(false);
-
-  
   return (
     <div>
     <Navbar expand="lg" className="bg-body-tertiary bg-dark ">
@@ -51,9 +48,6 @@ const {searchinp, setsearchinp,searchhide, setsearchhide} = useContext(context)
         </Navbar.Collapse>
       </Container>
     </Navbar>
-    {/* <div>
-     <img style={{width:"100%",height:"652px"}} src="https://cdn.neowin.com/news/images/uploaded/2023/05/1683747988_background-size1920x1080-4e1694a6-75aa-4c36-9d4d-7fb6a3102005-bc5318781aad7f5c8520.jpg" alt="" />
-    </div> */}
     </div>
   )
 }
