@@ -1,0 +1,42 @@
+.movie {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .movie-card {
+    width: 250px;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+   
+  }
+  
+  .image {
+    position: relative;
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  
+  .image:hover img {
+    transform: scale(1.1);
+  }
+
+  .movie-title {
+    margin-top: 10px;
+    text-align: center;
+  }
+  
+  .movie-info {
+    font-size: 14px;
+    text-align: center;
+    color: #666;
+  }
+  
