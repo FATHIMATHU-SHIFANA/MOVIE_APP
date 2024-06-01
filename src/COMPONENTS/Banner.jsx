@@ -1,17 +1,17 @@
 import axios from 'axios'
 import React, { useState } from 'react'
 import { useEffect } from 'react'
-import { imageUrl, popularMovies } from './Url'
+import { comedyMovies, imageUrl} from './Url'
 
 const Banner = () => {
-  const [popmov, setpopmov] = useState([])
+  const [mov, setmov] = useState([])
   useEffect(() => {
-    axios.get(popularMovies).then((res) => setpopmov(res.data.results))
+    axios.get(comedyMovies).then((res) => setmov(res.data.results))
   }, [])
-  console.log(popmov);
+  console.log(mov);
   const getRandomObject = () => {
-    const randomIndex = Math.floor(Math.random() * popmov.length);
-    return popmov[randomIndex];
+    const randomIndex = Math.floor(Math.random() * mov.length);
+    return mov[randomIndex];
   };
   const randomObject = getRandomObject();
 

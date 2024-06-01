@@ -1,8 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-// import Popular from './COMPONENTS/Popular'
-// import Comedy from './COMPONENTS/Comedy';
-// import Latest from './COMPONENTS/Latest';
 import Navbars from './COMPONENTS/Navbar';
 import './COMPONENTS/Navbars.css'
 import Movies from './COMPONENTS/Movies';
@@ -34,7 +31,7 @@ function App() {
             <Route path="/popular" element={<Movies pop={popularMovies} />} />
             <Route path="/latest" element={<Movies pop={latestMovies} />} />
             <Route path="/comedy" element={<Movies pop={comedyMovies} />} />
-            <Route path='/detailpage' element={<Detailpage backgroundImage="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg" />} />
+            <Route path='/detailpage' element={<Detailpage/>} />
           </Routes>
         </BrowserRouter>
       </context.Provider>
